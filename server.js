@@ -41,13 +41,13 @@ function processUTXOs(url) {
             for(let i = 0; i < response.data.unspent_outputs.length; i++) {
                 let unspentOutput = response.data.unspent_outputs[i]
 
-                let obj = {
+                let output = {
                     value: unspentOutput.value,
                     tx_hash: unspentOutput.tx_hash,
                     output_idx: unspentOutput.tx_index,
                 }
 
-                unspentTransactions.outputs.push(obj)
+                unspentTransactions.outputs.push(output)
             }
 
             // formats the output
