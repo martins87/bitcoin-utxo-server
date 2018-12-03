@@ -4,22 +4,20 @@ const http = require('http')
 var port = 8080
 var server = http.createServer()
 
-    server.on('request', function(request, response) {
-        response.writeHead(200)
+server.on('request', function(request, response) {
+    response.writeHead(200)
     
-        console.log('\nNew request: http://localhost:' + port + '' + request.url)
-        response.write('UTXOs printed on other terminal\n')
-        response.end()
+    console.log('\nNew request: http://localhost:' + port + '' + request.url)
+    response.write('UTXOs printed on other terminal\n')
+    response.end()
     
-        doTheStuff(request.url)
-    
-    })
+    processUTXOs(request.url)
+})
 
-    server.listen(port);
-    console.log('Make the requests on http://localhost:' + port + '/address/<bitcoin-address>');
+server.listen(port);
+console.log('Make the requests on http://localhost:' + port + '/address/<bitcoin-address>');
 
-
-function doTheStuff(url) {
+function processUTXOs(url) {
 
     /*
      * correct url must be 43 characters long
