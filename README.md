@@ -24,6 +24,6 @@ Terminal 1:
 
 Terminal 2:
 
-Make requests on Bitcoin addresses. for example:
+Make requests on Bitcoin addresses. For example:
 
 `$ curl http://localhost:8080/address/14DjTuAUh87cwRsbU1z6W8hZY6FnEkpfLS`
