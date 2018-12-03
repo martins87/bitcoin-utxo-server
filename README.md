@@ -2,7 +2,7 @@
 
 ## Solution
 
-We can use node and axios as a simple solution to this challenge
+We can use node and axios as a simple solution to this challenge.
 
 Check https://www.npmjs.com/package/axios
 
