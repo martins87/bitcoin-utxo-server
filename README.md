@@ -1,4 +1,4 @@
-# Bitcoin unspent transaction outputs server
+# Bitcoin unspent transactions outputs server
 
 ## Solution 1
 
