@@ -1,8 +1,8 @@
 # Bitcoin unspent transactions outputs server
 
-## Solution 1
+## Solution
 
-Using node and axios.
+We can use node and axios as a simple solution to this challenge
 
 Check https://www.npmjs.com/package/axios
 
