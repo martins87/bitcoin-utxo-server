@@ -40,7 +40,7 @@ function doTheStuff(url) {
                 outputs: []
             }
 
-            for(let i = 0; i < 3; i++) {
+            for(let i = 0; i < response.data.unspent_outputs.length; i++) {
                 let unspentOutput = response.data.unspent_outputs[i]
 
                 let obj = {
