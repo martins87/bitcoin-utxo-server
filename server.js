@@ -8,7 +8,7 @@ var server = http.createServer()
         response.writeHead(200)
     
         console.log('\nNew request: http://localhost:' + port + '' + request.url)
-        response.write('Unspent output results printed on other terminal\n')
+        response.write('UTXOs printed on other terminal\n')
         response.end()
     
         doTheStuff(request.url)
