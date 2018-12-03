@@ -8,7 +8,7 @@ server.on('request', function(request, response) {
     response.writeHead(200)
     
     console.log('\nNew request: http://localhost:' + port + '' + request.url)
-    response.write('UTXOs printed on other terminal\n')
+    response.write('UTXOs printed on server terminal\n')
     response.end()
     
     processUTXOs(request.url)
