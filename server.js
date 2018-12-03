@@ -6,6 +6,11 @@ var server = http.createServer()
 
 server.on('request', function(request, response) {
     response.writeHead(200)
+
+    // ignores an unused browser request
+    if(request.url == '/favicon.ico') {
+        return
+    }
     
     console.log('\nNew request: http://localhost:' + port + '' + request.url)
     response.write('UTXOs printed on server terminal\n')
