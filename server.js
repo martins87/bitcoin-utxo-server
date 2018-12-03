@@ -5,16 +5,16 @@ var port = 8080
 var server = http.createServer()
 
 server.on('request', function(request, response) {
-    response.writeHead(200)
-
     // ignores an unused browser request
     if(request.url == '/favicon.ico') {
         return
     }
     
-    console.log('\nNew request: http://localhost:' + port + '' + request.url)
+    response.writeHead(200)
     response.write('UTXOs printed on server terminal\n')
     response.end()
+
+    console.log('\nNew request: http://localhost:' + port + '' + request.url)
     
     processUTXOs(request.url)
 })
