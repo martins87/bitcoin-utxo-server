@@ -36,7 +36,7 @@ function doTheStuff(url) {
     axios.get('https://blockchain.info/unspent?active=' + address)
         .then(function(response) {
 
-            let result = {
+            let utxos = {
                 outputs: []
             }
 
@@ -49,11 +49,11 @@ function doTheStuff(url) {
                     output_idx: unspentOutput.tx_index,
                 }
 
-                result.outputs.push(obj)
+                utxos.outputs.push(obj)
             }
 
             // formats the output
-            let unspentTransactionOutputs = JSON.stringify(result, null, 3)
+            let unspentTransactionOutputs = JSON.stringify(utxos, null, 3)
             console.log('Unspent transaction outputs:')
             console.log(unspentTransactionOutputs)
 
